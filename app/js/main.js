@@ -4,9 +4,9 @@ let spiral = document.querySelector('.spiral');
 let rele1 = document.querySelector('.rele1');
 let rele2 = document.querySelector('.rele2');
 
-
 let range = document.querySelectorAll('.nav-item-input');
 let spanCurrTemp = document.getElementById('currTemp');
+
 range.forEach(item => {
     item.addEventListener('change', (e) => {
         let currTemp = e.target.value
@@ -25,15 +25,11 @@ range.forEach(item => {
     })
 })
 
-
 let thermostatLogic = () => {
     let tempInputList = document.querySelectorAll('.nav-item-input')
     let indicatorList = document.querySelectorAll('.indicator')
     let rele1State = document.querySelector('.rele1State')
     let rele2State = document.querySelector('.rele2State')
-    //
-    // tempInputList[1].setAttribute("disabled", "disabled")
-    // tempInputList[2].setAttribute("disabled", "disabled")
 
     if (tempInputList[0].value >= tempInputList[1].value) {
         indicatorList[0].style.cssText = 'background-color: #ff0300'

@@ -11,48 +11,52 @@
 	<script src="js/main.js" defer></script>
 </head>
 <body>
+<div id="particles-js"></div>
 	<div class="wrapApp">
-		<div>
+		<div class="wrap-head-main">
 			<header class="header">
 				<h1 class="titleApp">
 					Thermostat simulation
 				</h1>
 			</header>
-			<main class="mainContent">
-				<div class="wrapForDisplay">
-					<img src="./img/schema_up%20.png" alt="" class="shema">
-					<img src="./img/cooler.png" alt="" class="cooler">
-					<img src="./img/spiral2.png" alt="" class="spiral">
-					<div class="indicator indicator_1"></div>
-					<div class="indicator indicator_2"></div>
-					<div class="display">
-						<div class="displayReleWrap">
-							<div>
-								<span>Rele1:</span>
-								<span class="rele1">0 deg</span>
-								<span class="rele1State">Off</span>
+			<div class="wrap-main">
+				<main class="mainContent">
+					<div class="wrapForDisplay">
+						<img src="./img/thermTransparent.png" alt="" class="shema">
+						<img src="./img/cooler.png" alt="" class="cooler">
+						<img src="./img/spiral2.png" alt="" class="spiral">
+						<div class="indicator indicator_1"></div>
+						<div class="indicator indicator_2"></div>
+						<div class="display">
+							<div class="displayReleWrap">
+								<div>
+									<span>Rele1:</span>
+									<span class="rele1">0 deg</span>
+									<span class="rele1State">Off</span>
+								</div>
+								<div>
+									<span>Rele2:</span>
+									<span class="rele2">0 deg</span>
+									<span class="rele2State">Off</span>
+								</div>
 							</div>
-							<div>
-								<span>Rele2:</span>
-								<span class="rele2">0 deg</span>
-								<span class="rele2State">Off</span>
+							<div class="displayCurrentT">
+								<span>Temp:</span>
+								<span id="currTemp">0 deg</span>
 							</div>
 						</div>
-						<div class="displayCurrentT">
-							<span>Temp:</span>
-							<span id="currTemp">0 deg</span>
+					</div>
+					<div class="nav">
+						<div class="input-wrap">
+							<input data-id="temp"  class="nav-item-input nav-item-input_1" type="range" min="0" max="99" step="1" value="0">
+							<input data-id="rele1" class="nav-item-input nav-item-input_2" type="range" min="0" max="99" step="1" value="0">
+							<input data-id="rele2" class="nav-item-input nav-item-input_3" type="range" min="0" max="99" step="1" value="0">
 						</div>
+						<button class="btnStart" onclick="thermostatLogic()">Refresh</button>
 					</div>
-				</div>
-				<div class="nav">
-					<div class="input-wrap">
-						<input data-id="temp"  class="nav-item-input nav-item-input_1" type="range" min="0" max="99" step="1" value="0">
-						<input data-id="rele1" class="nav-item-input nav-item-input_2" type="range" min="0" max="99" step="1" value="0">
-						<input data-id="rele2" class="nav-item-input nav-item-input_3" type="range" min="0" max="99" step="1" value="0">
-					</div>
-					<button class="btnStart" onclick="thermostatLogic()">Refresh</button>
-				</div>
-			</main>
+
+				</main>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="wrapper_footer-element">
@@ -64,5 +68,9 @@
 			</div>
 		</footer>
 	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+	<script src="./js/paralax.js" defer></script>
 </body>
 </html>
