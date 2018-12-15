@@ -88,6 +88,9 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 	var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
 	.pipe(gulp.dest('dist/fonts'));
 
+	var buildConfig = gulp.src('app/assets/**/*') // Переносим шрифты в продакшен
+		.pipe(gulp.dest('dist/assets'));
+
 	var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
 	.pipe(gulp.dest('dist/js'));
 
